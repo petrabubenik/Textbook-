@@ -1,4 +1,4 @@
-# Project Log
+## Project Log
 
 **Name:** Petra Bubenik
 **Startup:** CampusBooks
@@ -6,7 +6,7 @@
 
 ## Work sessions
 
-### Session 1 -- Nov 18 -- driver: Petra
+## Session 1 -- Nov 18 -- driver: Petra
 
 - Goal for this session: create the home page and make sure all buttons and tabs work properly
 - Key prompts I gave Copilot:
@@ -15,7 +15,7 @@
 - What broke, and how I fixed it: Copilot added a community button that didn't seem relevant to my app, so I asked Copilot to take it out.
 - Committed? [yes/no -- add your commit message]
 
-### Session 2 -- Nov 23 -- driver: Petra
+## Session 2 -- Nov 23 -- driver: Petra
 
 - Goal for this session: add a checkout tab
 - Key prompts I gave Copilot:
@@ -24,7 +24,7 @@
 - What broke, and how I fixed it: I couldn't add a textbook to the checkout, so I asked Copilot to make sure textbooks can be put into a cart.
 - Committed? [yes/no -- add your commit message]
 
-### Session 3 -- Nov 25 -- driver: Petra
+## Session 3 -- Nov 25 -- driver: Petra
 
 - Goal for this session: show selling and renting prices on each textbook so students can see the difference in price
 - Key prompts I gave Copilot:
@@ -33,7 +33,7 @@
 - What broke, and how I fixed it: when you clicked on a textbook only one price appeared, so I asked Copilot to make sure the price you click is the one that appears in checkout.
 - Committed? [yes/no -- add your commit message]
 
-### Session 4 -- Nov 26 -- driver: Petra
+## Session 4 -- Nov 26 -- driver: Petra
 
 - Goal for this session: add a tab where you can make an account
 - Key prompts I gave Copilot:
