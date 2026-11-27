@@ -1,0 +1,64 @@
+## Project Log
+
+**Name:** Petra Bubenik
+**Startup:** CampusBooks
+**Live site:** https://petrabubenik.github.io/Textbook-/
+
+## Work sessions
+
+## Session 1 -- Nov 18 -- driver: Petra
+
+- Goal for this session: create the home page and make sure all buttons and tabs work properly
+- Key prompts I gave Copilot:
+  1. "Make me an app where students can rent or buy textbooks from other students at their universities."
+- What worked: the home page and all the tabs
+- What broke, and how I fixed it: Copilot added a community button that didn't seem relevant to my app, so I asked Copilot to take it out.
+- Committed? [yes/no -- add your commit message]
+
+## Session 2 -- Nov 23 -- driver: Petra
+
+- Goal for this session: add a checkout tab
+- Key prompts I gave Copilot:
+  1. "Add a checkout tab and make sure students can search their universities so they can browse books near them."
+- What worked: the checkout tab was available to see
+- What broke, and how I fixed it: I couldn't add a textbook to the checkout, so I asked Copilot to make sure textbooks can be put into a cart.
+- Committed? [yes/no -- add your commit message]
+
+## Session 3 -- Nov 25 -- driver: Petra
+
+- Goal for this session: show selling and renting prices on each textbook so students can see the difference in price
+- Key prompts I gave Copilot:
+  1. "Have separate prices for selling and renting, and make sure students can see them."
+- What worked: every textbook posted shows two different prices, depending on whether the student is buying or renting
+- What broke, and how I fixed it: when you clicked on a textbook only one price appeared, so I asked Copilot to make sure the price you click is the one that appears in checkout.
+- Committed? [yes/no -- add your commit message]
+
+## Session 4 -- Nov 26 -- driver: Petra
+
+- Goal for this session: add a tab where you can make an account
+- Key prompts I gave Copilot:
+  1. "Make a tab so you can make an account."
+- What worked: the buttons to input your personal information
+- What broke, and how I fixed it: it made separate places to post a book and to make an account, but both asked for account information, so I asked Copilot to merge the tabs together.
+- Committed? [yes/no -- add your commit message]
+
+## Things that broke
+
+| Date | What went wrong | What we tried | What finally fixed it |
+|---|---|---|---|
+| Nov 18 | Copilot added a community button that wasn't relevant to my app | Asked Copilot to take it out | Copilot removed the button |
+| Nov 23 | Couldn't add a textbook to the checkout | Asked Copilot to make sure textbooks can be put into a cart | Copilot added cart functionality |
+| Nov 25 | Clicking on a textbook showed only one price | Asked Copilot to make the price I click the one that appears in checkout | Copilot updated the price selection |
+| Nov 26 | Posting a book and making an account were separate places that both asked for account information | Asked Copilot to merge the tabs | Copilot merged them into one |
+
+## What a real version would need
+
+| Feature we faked or skipped | Why a real company would need it | How hard / expensive? |
+|---|---|---|
+| Real accounts and logins | Students must manage only their own listings and requests, and verifying a student email would keep it to real students | Easy to medium: a SaaS login service, cheap at small scale but more as it grows |
+| Mobile app | Students are always on their phones | Expensive: needs a developer and a platform |
+| Notifications | Email or text alerts for new requests, due dates and other messages | Medium: a SaaS email/SMS service, with a cost per message |
+| Hosting for the site and app | It needs to stay online, especially at the start of semesters when people are buying textbooks | Medium: a PaaS hosting platform, with cost rising as traffic increases |
+| Data security and privacy | The site would hold names, student emails, payment details and pickup locations | Hard and expensive: a PaaS with built-in security tools like encryption and access controls, and it's not a one-time purchase |
+
+## Reflection
