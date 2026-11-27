@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f8fc">
+  <title>Our community — CampusBooks</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body id="top">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="CampusBooks home"><span class="brand-mark" aria-hidden="true">c.</span> CampusBooks</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="university.html">University</a>
+      <a href="books.html">Browse</a>
+      <a href="account.html">Account</a>
+      <a href="checkout.html">Checkout <span class="cart-count">0</span></a>
+    </nav>
+    <a class="nav-cta" href="books.html">Find your book <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main class="page-main community-main">
+    <section class="page-heading">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> A BIGGER SHELF, TOGETHER</p>
+      <div class="heading-row">
+        <div><h1>Good things<br><span>get around.</span></h1></div>
+        <p class="heading-aside">Every student who joins brings their own books, classes, and connections. See how a growing campus community can make the right book easier to find.</p>
+      </div>
+    </section>
+
+    <section class="growth-panel" aria-labelledby="growth-heading">
+      <div class="growth-intro">
+        <div>
+          <p class="eyebrow">A LITTLE WHAT-IF</p>
+          <h2 id="growth-heading">More students,<br>more possibilities.</h2>
+        </div>
+        <p>Move the slider to imagine a community growing around you. These are illustrative estimates, not live marketplace numbers.</p>
+      </div>
+      <div class="slider-block">
+        <div class="slider-label"><label for="student-slider">Students on campus</label><output id="student-value" for="student-slider">120</output></div>
+        <input id="student-slider" type="range" min="5" max="500" value="120" step="1">
+        <div class="range-labels"><span>5 students</span><span>500 students</span></div>
+      </div>
+      <div class="metric-grid" aria-live="polite">
+        <div class="metric-card"><span class="metric-label">BOOKS SHARED</span><strong id="book-total">168</strong><span class="metric-note">on the campus shelf</span><span class="metric-decoration" aria-hidden="true">↗</span></div>
+        <div class="metric-card metric-card-accent"><span class="metric-label">CHANCE OF A MATCH</span><strong id="match-rate">51%</strong><span class="metric-note">of finding your book</span><span class="metric-decoration" aria-hidden="true">✳</span></div>
+      </div>
+      <p class="growth-footnote"><span aria-hidden="true">✳</span> More sellers attract more buyers—and more buyers help good books find their next reader.</p>
+    </section>
+
+    <section class="community-cta">
+      <div><p class="eyebrow">YOUR TURN</p><h2>Find a book<br>for your next class.</h2></div>
+      <a class="button button-dark" href="books.html">Browse textbooks <span aria-hidden="true">→</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="footer-brand" href="index.html">CampusBooks <span>© 2026</span></a>
+    <p>Student prototype for a university course. Not a real business.</p>
+    <a class="footer-top" href="#top">Back to top ↑</a>
+  </footer>
+</body>
+</html>

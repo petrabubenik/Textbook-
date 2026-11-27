@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f8fc">
+  <title>Checkout — CampusBooks</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body id="top">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="CampusBooks home"><span class="brand-mark" aria-hidden="true">c.</span> CampusBooks</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="university.html">University</a>
+      <a href="books.html">Browse</a>
+      <a href="account.html">Account</a>
+      <a class="active" href="checkout.html">Checkout <span class="cart-count">0</span></a>
+    </nav>
+    <a class="nav-cta" href="books.html">Back to books <span aria-hidden="true">↗</span></a>
+  </header>
+  <main class="page-main">
+    <section class="page-heading">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> YOUR BOOK BAG</p>
+      <div class="heading-row">
+        <div><h1>Take a look<br><span>before you go.</span></h1></div>
+        <p class="heading-aside">Review the books you picked and choose a prototype checkout. No payment details are requested or collected.</p>
+      </div>
+    </section>
+    <section class="checkout-layout">
+      <div class="checkout-list">
+        <div class="checkout-list-heading"><p class="eyebrow">YOUR SELECTION</p><a href="books.html">Keep browsing <span aria-hidden="true">→</span></a></div>
+        <div id="checkout-items"></div>
+        <div class="checkout-empty" id="checkout-empty"><h2>Your book bag is empty.</h2><p>Find a textbook and add it to your checkout.</p><a class="button button-dark" href="books.html">Browse textbooks <span aria-hidden="true">→</span></a></div>
+        <p class="checkout-message" id="checkout-message" role="status" aria-live="polite"></p>
+      </div>
+      <aside class="checkout-summary" id="checkout-summary" hidden>
+        <p class="eyebrow">SAMPLE SUMMARY</p>
+        <h2>Almost there.</h2>
+        <div class="summary-row"><span>Buy subtotal</span><strong id="buy-total">$0</strong></div>
+        <div class="summary-row"><span>Rental prices</span><strong id="rent-total">$0</strong></div>
+        <div class="summary-row summary-total"><span>Sample total</span><strong id="grand-total">$0</strong></div>
+        <p class="summary-note">Rental prices cover the listed rental period. Damage and late fees are separate and only apply if incurred. No money is collected.</p>
+        <button class="button button-dark checkout-confirm" id="checkout-confirm" type="button">Confirm prototype request <span aria-hidden="true">→</span></button>
+      </aside>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <a class="footer-brand" href="index.html">CampusBooks <span>© 2026</span></a>
+    <p>Student prototype for a university course. Not a real business.</p>
+    <a class="footer-top" href="#top">Back to top ↑</a>
+  </footer>
+</body>
+</html>

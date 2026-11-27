@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f8fc">
+  <title>Browse textbooks — CampusBooks</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body id="top">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="CampusBooks home"><span class="brand-mark" aria-hidden="true">c.</span> CampusBooks</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="university.html">University</a>
+      <a class="active" href="books.html">Browse</a>
+      <a href="account.html">Account</a>
+      <a href="checkout.html">Checkout <span class="cart-count">0</span></a>
+    </nav>
+    <a class="nav-cta" href="university.html">Choose a campus <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main class="page-main">
+    <section class="page-heading">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> THE STUDENT-TO-STUDENT SHELF</p>
+      <div class="heading-row">
+        <div><h1>Find your next<br><span>good read.</span></h1></div>
+        <p class="heading-aside">Pre-loved textbooks, passed along by students just like you. Find one for your course, your budget, and your bookshelf.</p>
+      </div>
+    </section>
+
+    <section class="catalog" aria-labelledby="catalog-heading">
+      <div class="catalog-top">
+        <div>
+          <p class="eyebrow">THE BOOKSHELF <span class="campus-context" id="campus-context"></span></p>
+          <h2 id="catalog-heading">Books in the neighborhood <span class="result-count" id="result-count">12 books</span></h2>
+        </div>
+        <label class="search-box">
+          <span class="sr-only">Search books by title, course, or condition</span>
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input id="book-search" type="search" placeholder="Search title or course…" autocomplete="off">
+          <kbd>⌘ K</kbd>
+        </label>
+      </div>
+      <div class="book-grid" id="book-grid">
+        <article class="book-card" data-search="biology of plants biology 110 good">
+          <div class="card-top"><span class="book-category">LIFE SCIENCES</span><span class="condition"><span></span> Good</span></div>
+          <div class="mini-book cover-sage"><span class="cover-kicker">A FIELD GUIDE</span><span class="cover-title">BIOLOGY<br>OF PLANTS</span><span class="cover-detail">SECOND EDITION · 2022</span></div>
+          <h3>Biology of Plants</h3><p class="book-course">BIO 110 · Intro to Biology</p>
+          <div class="card-bottom"><div class="prices"><span><strong>$32</strong> buy</span><span><strong>$12</strong> / semester</span></div><button class="request-button" type="button" data-book="Biology of Plants">Request this book <span aria-hidden="true">→</span></button></div>
+        </article>
+        <article class="book-card" data-search="thinking with data statistics 201 like new">
+          <div class="card-top"><span class="book-category">MATHEMATICS</span><span class="condition"><span></span> Like new</span></div>
+          <div class="mini-book cover-blue"><span class="cover-kicker">A PRACTICAL GUIDE</span><span class="cover-title">THINKING<br>WITH DATA</span><span class="cover-detail">THIRD EDITION · 2023</span></div>
+          <h3>Thinking with Data</h3><p class="book-course">STAT 201 · Statistics I</p>
+          <div class="card-bottom"><div class="prices"><span><strong>$45</strong> buy</span><span><strong>$16</strong> / semester</span></div><button class="request-button" type="button" data-book="Thinking with Data">Request this book <span aria-hidden="true">→</span></button></div>
+        </article>
+        <article class="book-card" data-search="worlds in motion world history 101 fair">
+          <div class="card-top"><span class="book-category">HUMANITIES</span><span class="condition"><span></span> Fair</span></div>
+          <div class="mini-book cover-rust"><span class="cover-kicker">A GLOBAL STORY</span><span class="cover-title">WORLDS<br>IN MOTION</span><span class="cover-detail">FIRST EDITION · 2021</span></div>
+          <h3>Worlds in Motion</h3><p class="book-course">HIST 101 · World History</p>
+          <div class="card-bottom"><div class="prices"><span><strong>$24</strong> buy</span><span><strong>$9</strong> / semester</span></div><button class="request-button" type="button" data-book="Worlds in Motion">Request this book <span aria-hidden="true">→</span></button></div>
+        </article>
+        <article class="book-card" data-search="the living city urban studies 220 good">
+          <div class="card-top"><span class="book-category">SOCIAL SCIENCE</span><span class="condition"><span></span> Good</span></div>
+          <div class="mini-book cover-lilac"><span class="cover-kicker">PEOPLE &amp; PLACES</span><span class="cover-title">THE<br>LIVING CITY</span><span class="cover-detail">SECOND EDITION · 2020</span></div>
+          <h3>The Living City</h3><p class="book-course">URBN 220 · Urban Studies</p>
+          <div class="card-bottom"><div class="prices"><span><strong>$38</strong> buy</span><span><strong>$14</strong> / semester</span></div><button class="request-button" type="button" data-book="The Living City">Request this book <span aria-hidden="true">→</span></button></div>
+        </article>
+        <article class="book-card" data-search="everyday economics economics 101 like new">
+          <div class="card-top"><span class="book-category">BUSINESS</span><span class="condition"><span></span> Like new</span></div>
+          <div class="mini-book cover-yellow"><span class="cover-kicker">MAKING SENSE OF</span><span class="cover-title">EVERYDAY<br>ECONOMICS</span><span class="cover-detail">FOURTH EDITION · 2024</span></div>
+          <h3>Everyday Economics</h3><p class="book-course">ECON 101 · Microeconomics</p>
+          <div class="card-bottom"><div class="prices"><span><strong>$52</strong> buy</span><span><strong>$18</strong> / semester</span></div><button class="request-button" type="button" data-book="Everyday Economics">Request this book <span aria-hidden="true">→</span></button></div>
+        </article>
+        <article class="book-card" data-search="matter and energy chemistry 120 good">
+          <div class="card-top"><span class="book-category">LIFE SCIENCES</span><span class="condition"><span></span> Good</span></div>
+          <div class="mini-book cover-teal"><span class="cover-kicker">THE BASICS</span><span class="cover-title">MATTER<br>&amp; ENERGY</span><span class="cover-detail">SECOND EDITION · 2022</span></div>
+          <h3>Matter and Energy</h3><p class="book-course">CHEM 120 · General Chemistry</p>
+          <div class="card-bottom"><div class="prices"><span><strong>$41</strong> buy</span><span><strong>$15</strong> / semester</span></div><button class="request-button" type="button" data-book="Matter and Energy">Request this book <span aria-hidden="true">→</span></button></div>
+        </article>
+        <article class="book-card" data-search="a map of the mind psychology 100 fair">
+          <div class="card-top"><span class="book-category">SOCIAL SCIENCE</span><span class="condition"><span></span> Fair</span></div>
+          <div class="mini-book cover-pink"><span class="cover-kicker">INTRODUCING</span><span class="cover-title">A MAP OF<br>THE MIND</span><span class="cover-detail">FIRST EDITION · 2021</span></div>
+          <h3>A Map of the Mind</h3><p class="book-course">PSYC 100 · Introduction to Psychology</p>
+          <div class="card-bottom"><div class="prices"><span><strong>$27</strong> buy</span><span><strong>$10</strong> / semester</span></div><button class="request-button" type="button" data-book="A Map of the Mind">Request this book <span aria-hidden="true">→</span></button></div>
+        </article>
+        <article class="book-card" data-search="small things considered environmental studies 150 like new">
+          <div class="card-top"><span class="book-category">ENVIRONMENT</span><span class="condition"><span></span> Like new</span></div>
+          <div class="mini-book cover-forest"><span class="cover-kicker">OUR SHARED PLANET</span><span class="cover-title">SMALL THINGS<br>CONSIDERED</span><span class="cover-detail">THIRD EDITION · 2023</span></div>
+          <h3>Small Things Considered</h3><p class="book-course">ENVS 150 · Our Environment</p>
+          <div class="card-bottom"><div class="prices"><span><strong>$36</strong> buy</span><span><strong>$13</strong> / semester</span></div><button class="request-button" type="button" data-book="Small Things Considered">Request this book <span aria-hidden="true">→</span></button></div>
+        </article>
+        <article class="book-card" data-search="words at work writing 101 good">
+          <div class="card-top"><span class="book-category">HUMANITIES</span><span class="condition"><span></span> Good</span></div>
+          <div class="mini-book cover-orange"><span class="cover-kicker">WRITING &amp; RHETORIC</span><span class="cover-title">WORDS<br>AT WORK</span><span class="cover-detail">SECOND EDITION · 2020</span></div>
+          <h3>Words at Work</h3><p class="book-course">WRIT 101 · College Writing</p>
+          <div class="card-bottom"><div class="prices"><span><strong>$22</strong> buy</span><span><strong>$8</strong> / semester</span></div><button class="request-button" type="button" data-book="Words at Work">Request this book <span aria-hidden="true">→</span></button></div>
+        </article>
+        <article class="book-card" data-search="patterns of life biology 204 good">
+          <div class="card-top"><span class="book-category">LIFE SCIENCES</span><span class="condition"><span></span> Good</span></div>
+          <div class="mini-book cover-lime"><span class="cover-kicker">LIVING SYSTEMS</span><span class="cover-title">PATTERNS<br>OF LIFE</span><span class="cover-detail">FIRST EDITION · 2022</span></div>
+          <h3>Patterns of Life</h3><p class="book-course">BIO 204 · Ecology</p>
+          <div class="card-bottom"><div class="prices"><span><strong>$34</strong> buy</span><span><strong>$12</strong> / semester</span></div><button class="request-button" type="button" data-book="Patterns of Life">Request this book <span aria-hidden="true">→</span></button></div>
+        </article>
+        <article class="book-card" data-search="numbers in the wild mathematics 125 fair">
+          <div class="card-top"><span class="book-category">MATHEMATICS</span><span class="condition"><span></span> Fair</span></div>
+          <div class="mini-book cover-violet"><span class="cover-kicker">A VISUAL APPROACH</span><span class="cover-title">NUMBERS<br>IN THE WILD</span><span class="cover-detail">SECOND EDITION · 2019</span></div>
+          <h3>Numbers in the Wild</h3><p class="book-course">MATH 125 · Applied Math</p>
+          <div class="card-bottom"><div class="prices"><span><strong>$19</strong> buy</span><span><strong>$7</strong> / semester</span></div><button class="request-button" type="button" data-book="Numbers in the Wild">Request this book <span aria-hidden="true">→</span></button></div>
+        </article>
+        <article class="book-card" data-search="the art of looking art history 105 like new">
+          <div class="card-top"><span class="book-category">ARTS</span><span class="condition"><span></span> Like new</span></div>
+          <div class="mini-book cover-sky"><span class="cover-kicker">A VISUAL JOURNEY</span><span class="cover-title">THE ART<br>OF LOOKING</span><span class="cover-detail">THIRD EDITION · 2024</span></div>
+          <h3>The Art of Looking</h3><p class="book-course">ARTH 105 · Art History</p>
+          <div class="card-bottom"><div class="prices"><span><strong>$48</strong> buy</span><span><strong>$17</strong> / semester</span></div><button class="request-button" type="button" data-book="The Art of Looking">Request this book <span aria-hidden="true">→</span></button></div>
+        </article>
+        <article class="book-card" data-search="intro to astronomy astronomy 101 good">
+          <div class="card-top"><span class="book-category">PHYSICAL SCIENCE</span><span class="condition"><span></span> Good</span></div>
+          <div class="mini-book cover-violet"><span class="cover-kicker">A SKYWARD GUIDE</span><span class="cover-title">INTRO TO<br>ASTRONOMY</span><span class="cover-detail">SECOND EDITION · 2022</span></div>
+          <h3>Intro to Astronomy</h3><p class="book-course">ASTR 101 · The Solar System</p>
+          <div class="card-bottom"><div class="prices"><span><strong>$29</strong> buy</span><span><strong>$11</strong> / semester</span></div><button class="request-button" type="button" data-book="Intro to Astronomy">Request this book <span aria-hidden="true">→</span></button></div>
+        </article>
+        <article class="book-card" data-search="foundations of design design 110 like new">
+          <div class="card-top"><span class="book-category">ARTS</span><span class="condition"><span></span> Like new</span></div>
+          <div class="mini-book cover-pink"><span class="cover-kicker">FORM &amp; FUNCTION</span><span class="cover-title">FOUNDATIONS<br>OF DESIGN</span><span class="cover-detail">FIRST EDITION · 2023</span></div>
+          <h3>Foundations of Design</h3><p class="book-course">DES 110 · Visual Thinking</p>
+          <div class="card-bottom"><div class="prices"><span><strong>$39</strong> buy</span><span><strong>$14</strong> / semester</span></div><button class="request-button" type="button" data-book="Foundations of Design">Request this book <span aria-hidden="true">→</span></button></div>
+        </article>
+        <article class="book-card" data-search="the curious chemist chemistry 205 fair">
+          <div class="card-top"><span class="book-category">LIFE SCIENCES</span><span class="condition"><span></span> Fair</span></div>
+          <div class="mini-book cover-teal"><span class="cover-kicker">QUESTIONS &amp; EXPERIMENTS</span><span class="cover-title">THE CURIOUS<br>CHEMIST</span><span class="cover-detail">SECOND EDITION · 2020</span></div>
+          <h3>The Curious Chemist</h3><p class="book-course">CHEM 205 · Organic Chemistry</p>
+          <div class="card-bottom"><div class="prices"><span><strong>$26</strong> buy</span><span><strong>$9</strong> / semester</span></div><button class="request-button" type="button" data-book="The Curious Chemist">Request this book <span aria-hidden="true">→</span></button></div>
+        </article>
+        <article class="book-card" data-search="reading the modern world literature 210 good">
+          <div class="card-top"><span class="book-category">HUMANITIES</span><span class="condition"><span></span> Good</span></div>
+          <div class="mini-book cover-orange"><span class="cover-kicker">STORIES &amp; IDEAS</span><span class="cover-title">READING THE<br>MODERN WORLD</span><span class="cover-detail">THIRD EDITION · 2021</span></div>
+          <h3>Reading the Modern World</h3><p class="book-course">LIT 210 · Modern Literature</p>
+          <div class="card-bottom"><div class="prices"><span><strong>$31</strong> buy</span><span><strong>$12</strong> / semester</span></div><button class="request-button" type="button" data-book="Reading the Modern World">Request this book <span aria-hidden="true">→</span></button></div>
+        </article>
+        <article class="book-card" data-search="principles of finance finance 101 like new">
+          <div class="card-top"><span class="book-category">BUSINESS</span><span class="condition"><span></span> Like new</span></div>
+          <div class="mini-book cover-blue"><span class="cover-kicker">MONEY IN MOTION</span><span class="cover-title">PRINCIPLES<br>OF FINANCE</span><span class="cover-detail">SECOND EDITION · 2024</span></div>
+          <h3>Principles of Finance</h3><p class="book-course">FIN 101 · Personal Finance</p>
+          <div class="card-bottom"><div class="prices"><span><strong>$43</strong> buy</span><span><strong>$16</strong> / semester</span></div><button class="request-button" type="button" data-book="Principles of Finance">Request this book <span aria-hidden="true">→</span></button></div>
+        </article>
+        <article class="book-card" data-search="language in context linguistics 130 good">
+          <div class="card-top"><span class="book-category">HUMANITIES</span><span class="condition"><span></span> Good</span></div>
+          <div class="mini-book cover-lilac"><span class="cover-kicker">WORDS &amp; MEANING</span><span class="cover-title">LANGUAGE<br>IN CONTEXT</span><span class="cover-detail">FIRST EDITION · 2022</span></div>
+          <h3>Language in Context</h3><p class="book-course">LING 130 · Language and Society</p>
+          <div class="card-bottom"><div class="prices"><span><strong>$28</strong> buy</span><span><strong>$10</strong> / semester</span></div><button class="request-button" type="button" data-book="Language in Context">Request this book <span aria-hidden="true">→</span></button></div>
+        </article>
+        <article class="book-card" data-search="exploring earth systems geology 115 fair">
+          <div class="card-top"><span class="book-category">ENVIRONMENT</span><span class="condition"><span></span> Fair</span></div>
+          <div class="mini-book cover-forest"><span class="cover-kicker">A LIVING PLANET</span><span class="cover-title">EXPLORING<br>EARTH SYSTEMS</span><span class="cover-detail">SECOND EDITION · 2019</span></div>
+          <h3>Exploring Earth Systems</h3><p class="book-course">GEOL 115 · Earth Science</p>
+          <div class="card-bottom"><div class="prices"><span><strong>$21</strong> buy</span><span><strong>$8</strong> / semester</span></div><button class="request-button" type="button" data-book="Exploring Earth Systems">Request this book <span aria-hidden="true">→</span></button></div>
+        </article>
+        <article class="book-card" data-search="the shape of sound music 140 like new">
+          <div class="card-top"><span class="book-category">ARTS</span><span class="condition"><span></span> Like new</span></div>
+          <div class="mini-book cover-sky"><span class="cover-kicker">LISTEN CLOSER</span><span class="cover-title">THE SHAPE<br>OF SOUND</span><span class="cover-detail">FIRST EDITION · 2023</span></div>
+          <h3>The Shape of Sound</h3><p class="book-course">MUS 140 · Music and Culture</p>
+          <div class="card-bottom"><div class="prices"><span><strong>$35</strong> buy</span><span><strong>$13</strong> / semester</span></div><button class="request-button" type="button" data-book="The Shape of Sound">Request this book <span aria-hidden="true">→</span></button></div>
+        </article>
+      </div>
+      <p class="empty-state" id="empty-state" hidden>No books match that search. Try another title or course.</p>
+      <p class="catalog-note">Choose Buy or Rent to send interest to the listed seller. Sample books are illustrative; student listings and requests stay in this browser. No payment is collected.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="footer-brand" href="index.html">CampusBooks <span>© 2026</span></a>
+    <p>Student prototype for a university course. Not a real business.</p>
+    <a class="footer-top" href="#top">Back to top ↑</a>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

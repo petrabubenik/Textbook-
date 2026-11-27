@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f8fc">
+  <title>Account &amp; messages — CampusBooks</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body id="top">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="CampusBooks home"><span class="brand-mark" aria-hidden="true">c.</span> CampusBooks</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="university.html">University</a>
+      <a href="books.html">Browse</a>
+      <a class="active" href="account.html">Account</a>
+      <a href="checkout.html">Checkout <span class="cart-count">0</span></a>
+    </nav>
+    <a class="nav-cta" href="books.html">Browse books <span aria-hidden="true">↗</span></a>
+  </header>
+  <main class="page-main" id="account-root">
+    <section class="page-heading">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> YOUR CAMPUSBOOKS ACCOUNT</p>
+      <div class="heading-row">
+        <div><h1>Your books.<br><span>Your people.</span></h1></div>
+        <p class="heading-aside">Keep track of buy and rent requests for your listings, follow up on books you want, and message the other student.</p>
+      </div>
+    </section>
+
+    <section class="account-login-section" id="account-login">
+      <form class="post-form account-form" id="account-form">
+        <div class="form-heading">
+          <p class="eyebrow">SIGN IN OR CREATE AN ACCOUNT</p>
+          <p>Use the same email to return to your local profile.</p>
+        </div>
+        <label class="form-field">Your name<input name="name" type="text" maxlength="60" autocomplete="name" placeholder="e.g. Alex Morgan" required></label>
+        <label class="form-field">Email address<input name="email" type="email" maxlength="120" autocomplete="email" placeholder="you@university.edu" required></label>
+        <button class="button button-dark post-submit" type="submit">Continue <span aria-hidden="true">→</span></button>
+        <p class="form-message" id="account-message" role="status" aria-live="polite"></p>
+        <p class="form-disclaimer">Prototype sign-in only: no password or real identity check. Your profile, listings, requests, and chats are stored in this browser and are not shared with other devices.</p>
+      </form>
+    </section>
+
+    <section class="account-dashboard" id="account-dashboard" hidden>
+      <div class="account-welcome">
+        <div><p class="eyebrow">YOUR ACCOUNT</p><h2 id="account-greeting">Hello.</h2></div>
+        <button class="text-button text-button-muted" id="sign-out" type="button">Sign out</button>
+      </div>
+
+      <section class="account-section" id="post-book">
+        <div class="account-section-heading">
+          <div><p class="eyebrow">ADD TO YOUR SHELF</p><h2>Post a book</h2></div>
+        </div>
+        <form class="post-form" id="post-form">
+          <div class="form-heading"><p class="eyebrow">BOOK DETAILS</p><p>Set your rental period and any return fees.</p></div>
+          <label class="form-field">Book title<input name="title" type="text" maxlength="80" placeholder="e.g. The Art of Looking" required></label>
+          <label class="form-field">Course<input name="course" type="text" maxlength="80" placeholder="e.g. ARTH 105 · Art History" required></label>
+          <label class="form-field">University<select name="campus" id="post-campus" required>
+            <option value="">Choose your university…</option>
+            <option>Northwood University</option><option>Foxbridge College</option><option>Pinevale University</option><option>Lakebend Institute</option><option>Cedarfield College</option><option>Rivermere University</option>
+          </select></label>
+          <label class="form-field">Condition<select name="condition" required>
+            <option value="">Choose condition…</option><option>Like new</option><option>Good</option><option>Fair</option>
+          </select></label>
+          <div class="price-fields">
+            <label class="form-field">Selling price ($)<input name="buyPrice" type="number" min="0.01" max="9999" step="0.01" placeholder="32" required></label>
+            <label class="form-field">Rental price for this period ($)<input name="rentPrice" type="number" min="0.01" max="9999" step="0.01" placeholder="12" required></label>
+            <label class="form-field">Rental period (months)<input name="rentalMonths" type="number" min="1" max="24" step="1" placeholder="4" required></label>
+            <label class="form-field">Damage fee ($)<input name="damageFee" type="number" min="0" max="9999" step="0.01" placeholder="0" value="0" required></label>
+            <label class="form-field">Late return fee ($)<input name="lateReturnFee" type="number" min="0" max="9999" step="0.01" placeholder="0" value="0" required></label>
+          </div>
+          <button class="button button-dark post-submit" type="submit">Post my listing <span aria-hidden="true">→</span></button>
+          <p class="form-message" id="post-message" role="status" aria-live="polite"></p>
+          <p class="form-disclaimer">Prototype only: your listing is saved in this browser. It does not contact anyone or process payments.</p>
+        </form>
+      </section>
+
+      <div class="account-section">
+        <div class="account-section-heading">
+          <div><p class="eyebrow">YOUR SHELF</p><h2>Books you listed</h2></div>
+          <a class="text-button" href="#post-book">Add another book ↑</a>
+        </div>
+        <div class="owned-listings" id="my-listings"></div>
+      </div>
+
+      <div class="account-activity-grid">
+        <section class="account-section">
+          <div class="account-section-heading">
+            <div><p class="eyebrow">SELLER INBOX</p><h2>Requests for your books <span class="account-count" id="incoming-count">0</span></h2></div>
+          </div>
+          <div class="activity-list" id="incoming-requests"></div>
+        </section>
+        <section class="account-section">
+          <div class="account-section-heading">
+            <div><p class="eyebrow">YOUR INTEREST</p><h2>Books you requested <span class="account-count" id="sent-count">0</span></h2></div>
+          </div>
+          <div class="activity-list" id="sent-requests"></div>
+        </section>
+      </div>
+
+      <section class="account-section chat-section">
+        <div class="account-section-heading">
+          <div><p class="eyebrow">STUDENT-TO-STUDENT</p><h2>Messages</h2></div>
+        </div>
+        <div class="chat-panel" id="chat-panel"></div>
+      </section>
+      <p class="form-disclaimer account-disclaimer">All marketplace activity is a local prototype. Requests do not complete sales or rentals, and chats are only visible in this browser.</p>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <a class="footer-brand" href="index.html">CampusBooks <span>© 2026</span></a>
+    <p>Student prototype. Accounts and listings stay in this browser; no real messages or payments.</p>
+    <a class="footer-top" href="#top">Back to top ↑</a>
+  </footer>
+</body>
+</html>

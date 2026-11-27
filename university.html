@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f8fc">
+  <title>Find your university — CampusBooks</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body id="top">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="CampusBooks home"><span class="brand-mark" aria-hidden="true">c.</span> CampusBooks</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a class="active" href="university.html">University</a>
+      <a href="books.html">Browse</a>
+      <a href="account.html">Account</a>
+      <a href="checkout.html">Checkout <span class="cart-count">0</span></a>
+    </nav>
+    <a class="nav-cta" href="books.html">Browse books <span aria-hidden="true">↗</span></a>
+  </header>
+  <main class="page-main">
+    <section class="page-heading">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> START WITH YOUR CAMPUS</p>
+      <div class="heading-row">
+        <div><h1>Your campus,<br><span>your bookshelf.</span></h1></div>
+        <p class="heading-aside">Search for your university to see its student book listings. These fictional campuses are for the prototype only.</p>
+      </div>
+    </section>
+    <section class="campus-section">
+      <label class="search-box campus-search">
+        <span class="sr-only">Search universities</span>
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="university-search" type="search" placeholder="Search a university…" autocomplete="off">
+      </label>
+      <p class="campus-selected" id="campus-selected">No university selected yet.</p>
+      <div class="campus-grid" id="campus-grid">
+        <article class="campus-card" data-search="northwood university">
+          <span class="campus-number">01 / CAMPUS</span><h2>Northwood University</h2><p>Northwood</p>
+          <button class="campus-select" type="button" data-university="Northwood University">Choose campus <span aria-hidden="true">→</span></button>
+        </article>
+        <article class="campus-card" data-search="foxbridge college">
+          <span class="campus-number">02 / CAMPUS</span><h2>Foxbridge College</h2><p>Foxbridge</p>
+          <button class="campus-select" type="button" data-university="Foxbridge College">Choose campus <span aria-hidden="true">→</span></button>
+        </article>
+        <article class="campus-card" data-search="pinevale university">
+          <span class="campus-number">03 / CAMPUS</span><h2>Pinevale University</h2><p>Pinevale</p>
+          <button class="campus-select" type="button" data-university="Pinevale University">Choose campus <span aria-hidden="true">→</span></button>
+        </article>
+        <article class="campus-card" data-search="lakebend institute">
+          <span class="campus-number">04 / CAMPUS</span><h2>Lakebend Institute</h2><p>Lakebend</p>
+          <button class="campus-select" type="button" data-university="Lakebend Institute">Choose campus <span aria-hidden="true">→</span></button>
+        </article>
+        <article class="campus-card" data-search="cedarfield college">
+          <span class="campus-number">05 / CAMPUS</span><h2>Cedarfield College</h2><p>Cedarfield</p>
+          <button class="campus-select" type="button" data-university="Cedarfield College">Choose campus <span aria-hidden="true">→</span></button>
+        </article>
+        <article class="campus-card" data-search="rivermere university">
+          <span class="campus-number">06 / CAMPUS</span><h2>Rivermere University</h2><p>Rivermere</p>
+          <button class="campus-select" type="button" data-university="Rivermere University">Choose campus <span aria-hidden="true">→</span></button>
+        </article>
+      </div>
+      <p class="empty-state" id="campus-empty" hidden>No university found. Try another search.</p>
+      <a class="button button-dark campus-browse" href="books.html">Browse campus books <span aria-hidden="true">→</span></a>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <a class="footer-brand" href="index.html">CampusBooks <span>© 2026</span></a>
+    <p>Student prototype for a university course. Not a real business.</p>
+    <a class="footer-top" href="#top">Back to top ↑</a>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
